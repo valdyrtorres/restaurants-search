@@ -14,7 +14,8 @@ import {
   ImageSkeleton as Skeleton,
 } from '../../components';
 import logo from '../../assets/logo.svg';
-import { Container, Search, Logo, Title, Carousel, Wrapper } from './styles';
+import restaurante from '../../assets/restaurante-fake.png'
+import { Container, Search, Logo, Title, Carousel, Wrapper, CarouselTitle } from './styles';
 
 const Home = () => {
   const [value, setValue] = useState('');
@@ -80,13 +81,14 @@ const Home = () => {
     <Wrapper>
       <Container>
         <Search>
-          <Logo src={logo} alt="logo da empresa" />
+          <Logo src={logo} alt="Logo do Restaurante" />
           <TextField
             outlined
-            label="Pesquisar"
+            label="Pesquisar Restaurantes"
             trailingIcon={<MaterialIcon role="button" icon="search" />}>
             <Input type="text" value={value} onKeyPress={handleKeyPress} onChange={handleChange} />
           </TextField>
+          <CarouselTitle>Na sua Área</CarouselTitle>
           {renderCarousel()}
         </Search>
         {renderRestaurants()}

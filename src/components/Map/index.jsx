@@ -105,6 +105,27 @@ export const MapContainer = (props) => {
   );
 };
 
+/*
+You need an API key. Otherwise it won't work.
+
+To get an API Key you have to go to this webpage 
+https://cloud.google.com/maps-platform/#get-started and pick the products you need. Also select or create a project
+and finally you have to set up a billing account. Unfortunately it isn't for free as far as I know.
+"As of June 11, 2018, you must enable billing with a credit card and have a valid API key for all of your projects."
+
+https://cloud.google.com/maps-platform/user-guide/?hl=en
+
+and
+
+"You must have a valid API key and a billing account to access our APIs. When you enable billing, you will get $200 free usage every month for Maps, Routes, or Places."
+
+https://cloud.google.com/maps-platform/user-guide/account-changes/?hl=en
+*/
+
+/* substituir a api do Google
+    https://pt.stackoverflow.com/questions/383769/for-development-purposes-only-erro-com-o-google-maps
+*/
+
 export default GoogleApiWrapper({
   apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
   language: 'pt-BR',
